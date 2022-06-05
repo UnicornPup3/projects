@@ -1,8 +1,12 @@
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
-
-var engine, world;
+var ball
+function createBall(){
+if(World.frameCount % 410== 0){
+cat = createSprite(60,370,10,10);
+ball.scale = 0.13;
+}}
 
 var particle1, particle2,particle3,particle4,particle5;
 var particle6, particle7,particle8,particle9,particle10;

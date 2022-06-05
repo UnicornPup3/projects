@@ -1,6 +1,6 @@
-var cat, ground1;
-var catImg, groundImg;
-var catG, groundG;
+var cat, ground1, Rock, backgroundground;
+var catImg, groundImg, RockImg, galaxyImg;
+var catG, groundG, RockG, galaxyImg;
 var catTopY = 200;
 var catBottomY = 370;
 var alreadyJumped = false;
@@ -17,17 +17,27 @@ function createCat() {
 
 function createGround() {
     var groundImg = loadImage("ground.png");
-    ground1 = createSprite(400, 400, 10, 10);
+    ground1 = createSprite(400, 420, 10, 10);
     ground1.addImage(groundImg);
     ground1.scale = 2;
     ground1.x = ground1.width /1;
 
 }
 
+function Rock() {
+    var RockImg = loadImges("Rock.png");
+    Rock = createSprite(200,200,10,10);
+    Rock.addImage(galaxyImg);
+    Rock.scale = 2;
+    Rock.x = Rock.width /1;
+}
+
 function preload() {
     catG = new Group();
+    Rock = new Group();
     createCat();
     createGround();
+    createRock();
 }
 
 function setup() {
@@ -35,14 +45,14 @@ function setup() {
 }
 
 function draw() {
-    background(230, 230, 250);
+    background("galaxy.jpg");
     drawSprites();
     ground1.velocityX = -4
     if(ground1.x < 0){
         ground1.x = 600
         //ground1.x = ground1.width /2;
 
-    }
+}
     console.log(`cat pos: ${cat.y}`);
     if (keyDown("space") && !alreadyJumped) {
         alreadyJumped = true;
