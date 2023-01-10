@@ -32,9 +32,9 @@ function setup() {
   World.add(world,player)
 
  // playerArcher = new ( 340, playerBase.position.y - 112, 120, 120);
- // playerArcher = new PlayerArcher( 340, playerBase.position.y - 112, 120, 120);
- // playerArcher =  PlayerArcher( 340, playerBase.position.y - 112, 120, 120);
- // playerArcher = new PlayerArcher( );
+  playerArcher = new PlayerArcher( 340, playerBase.position.y - 112, 120, 120);
+ //playerArcher =  PlayerArcher( 340, playerBase.position.y - 112, 120, 120);
+  //playerArcher = new PlayerArcher( );
 
 }
 
@@ -48,7 +48,7 @@ function draw() {
 
   // playerArcher.display;
   // playerArcherdisplay();
-  // playerArcher.display();
+  playerArcher.display();
   // display();
 
   // Title
